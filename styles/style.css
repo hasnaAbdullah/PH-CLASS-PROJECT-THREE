@@ -12,6 +12,7 @@ body {
 }
 body:not(i) {
   font-family: "Work Sans", serif;
+  background-color: aliceblue;
 }
 :root {
   --darkOne: rgba(19, 19, 19);
@@ -64,6 +65,9 @@ main {
   align-items: center;
 }
 
+main section {
+  margin-top: 130px;
+}
 /* shared styles end*/
 
 .header-container {
@@ -110,20 +114,152 @@ header .navbar {
   margin: 50px 0; /*problem one */
   width: 100%;
 }
+/* team section style */
+main {
+  padding: 100px 0;
+}
+.team-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 73px;
+}
+.team-pictures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.team-content p {
+  margin: 24px 0 32px 0;
+}
+/* feature section style start */
+.feature-section {
+  gap: 54px;
+  align-items: center;
+  justify-content: space-between;
+}
+.feature-content {
+  max-width: 586px;
+}
+.feature-title {
+  border-left: 4px solid var(--orange);
+  padding: 0 22px;
+  max-width: 468px;
+  line-height: -1.9rem;
+}
+.feature-description {
+  padding: 24px 0 32px 0;
+}
+
+.feature {
+  margin-bottom: 20px;
+  padding: 22px;
+  background-color: var(--deepWhite);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 6%);
+}
+.feature h4 {
+  text-transform: capitalize;
+}
+.feature p {
+  margin-top: 10px;
+}
+.feature-profile {
+  max-width: 800px;
+  text-align: right;
+  & > img {
+    max-width: 708px;
+  }
+}
+
+.facts-content {
+  max-width: 542px;
+}
+.facts-content p {
+  padding: 24px 0;
+}
+
+.facts-cards {
+  max-width: 1350px;
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-around;
+}
+.facts-cards .card {
+  min-width: 240px;
+  padding: 46px 37px 60px;
+  border: 1px solid var(--orange);
+  text-align: center;
+  border-radius: 8px;
+}
+.facts-cards .card h4 {
+  padding: 10px 0;
+}
+.sponsors-content {
+  text-align: center;
+}
+.sponsors-content p {
+  padding: 24px 0 54px;
+  max-width: 542px;
+  margin: 0 auto;
+}
+.sponsors {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer section {
+  text-align: center;
+  background-color: var(--lightOrange);
+  padding: 40px 0;
+  margin-bottom: 80px;
+  border-radius: 8px;
+}
 @media screen and (max-width: 576px) {
+  h3 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .btn-container {
+    text-align: center;
+  }
+  .primary-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px 28px;
+  }
   header {
     padding: 6px;
   }
-  .brand {
-    font-size: 1.6rem;
-  }
+
   .nav-links {
     display: none;
   }
+  .banner-description,
   .banner-content {
     width: 100%;
   }
   .banner-title {
     font-size: 2.4rem;
+    width: 100%;
+  }
+  .banner {
+    margin-top: 100px;
+  }
+  main {
+    padding-top: 60px;
+  }
+  .team-section {
+    flex-direction: column;
+    padding: 5px;
+    gap: 50px;
+    text-align: center;
+  }
+  .team-pictures {
+    gap: 10px;
+  }
+  .team-pictures img {
+    width: 150px;
   }
 }
