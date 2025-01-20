@@ -25,6 +25,9 @@ body:not(i) {
   --lightOrange: rgba(255, 144, 14, 10%);
 }
 /* shared styles start*/
+.hide {
+  display: none;
+}
 a {
   font-size: 18px;
 }
@@ -56,6 +59,7 @@ footer,
 main {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .display-flex {
@@ -67,6 +71,7 @@ main {
 
 main section {
   margin-top: 130px;
+  padding: 5px;
 }
 /* shared styles end*/
 
@@ -99,13 +104,11 @@ header .navbar {
   margin-top: 140px;
 }
 .banner-content {
-  width: 75%;
+  max-width: 862px;
   margin: 0 auto;
   text-align: center;
 }
 .banner-title {
-  width: 60%;
-  margin: 0 auto;
 }
 .banner-content .banner-description {
   margin: 32px 0;
@@ -127,6 +130,9 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+}
+.team-pictures img {
+  max-width: 240px;
 }
 .team-content p {
   margin: 24px 0 32px 0;
@@ -180,9 +186,11 @@ main {
 
 .facts-cards {
   max-width: 1350px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
   margin-top: 80px;
   justify-content: space-around;
+  gap: 20px;
 }
 .facts-cards .card {
   min-width: 240px;
@@ -214,7 +222,7 @@ footer section {
   margin-bottom: 80px;
   border-radius: 8px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 586px) {
   h3 {
     font-size: 1.6rem;
   }
@@ -261,5 +269,54 @@ footer section {
   }
   .team-pictures img {
     width: 150px;
+  }
+  .facts-cards {
+    grid-template-columns: 240px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  h3 {
+    font-size: 1.9rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .banner-description,
+  .banner-content {
+    width: 100%;
+  }
+  .banner-title {
+    font-size: 3rem;
+    width: 100%;
+  }
+  .banner {
+    margin-top: 100px;
+  }
+  main {
+    padding-top: 60px;
+  }
+  .team-section {
+    flex-direction: column;
+    padding: 5px;
+    gap: 50px;
+    text-align: center;
+  }
+  .team-pictures {
+    gap: 10px;
+  }
+  .team-pictures img {
+    width: 200px;
+  }
+  .btn-container {
+    text-align: center;
+  }
+  .primary-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px 28px;
+  }
+  .facts-cards {
+    grid-template-columns: repeat(2, 240px);
+    justify-content: center;
   }
 }
